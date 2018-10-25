@@ -1,7 +1,7 @@
 <?php
 /**
- * @link https://github.com/simialbi/yii2-schema-org
- * @copyright Copyright (c) 2017 Simon Karlen
+ * @link https://github.com/drnixx/yii2-schema-org
+ * @copyright Copyright (c) 2018 Nick Panteleeff
  * @license MIT
  */
 

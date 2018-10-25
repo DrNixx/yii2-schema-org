@@ -1,12 +1,12 @@
 {
-	"name": "simialbi/yii2-schema-org",
+	"name": "drnixx/yii2-schema-org",
 	"description": "Schema.org yii2 representation and helpers for json-ld generation in Yii framework",
 	"keywords": ["yii2", "schema-org", "json-ld", "jsonld", "microdata", "structured-data"],
 	"type": "yii2-extension",
 	"license": "MIT",
 	"support": {
-		"issues": "https://github.com/simialbi/yii2-schema-org/issues",
-		"source": "https://github.com/simialbi/yii2-schema-org"
+		"issues": "https://github.com/drnixx/yii2-schema-org/issues",
+		"source": "https://github.com/drnixx/yii2-schema-org"
 	},
 	"authors": [
 		{

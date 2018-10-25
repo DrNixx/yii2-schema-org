@@ -12,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-$ php composer.phar require --prefer-dist simialbi/yii2-schema-org
+$ php composer.phar require --prefer-dist drnixx/yii2-schema-org
 ```
 
 or add 
 
 ```
-"simialbi/yii2-schema-org": "*"
+"drnixx/yii2-schema-org": "*"
 ```
 
 to the ```require``` section of your `composer.json`
@@ -34,7 +34,7 @@ Do this for console and for web application configuration file.
 ```php
 'modules' => [
 	'schema' => [
-		'class' => 'simialbi\yii2\schemaorg\Module',
+		'class' => 'drnixx\schemaorg\Module',
 		//'source' => 'http://schema.org/docs/full.html',
 		//'autoCreate' => false,
 		//'autoRender' => false
@@ -74,7 +74,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-use simialbi\yii2\schemaorg\helpers\JsonLDHelper;
+use drnixx\schemaorg\helpers\JsonLDHelper;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -101,8 +101,8 @@ $ php yii schema/schema-org
 To e.g. add a person to json+ld, you can do the following:
 
 ```php
-use simialbi\yii2\schemaorg\models\Person;
-use simialbi\yii2\schemaorg\helpers\JsonLDHelper;
+use drnixx\schemaorg\models\Person;
+use drnixx\schemaorg\helpers\JsonLDHelper;
 
 $child = new Person();
 $child->name = 'George W. Bush';

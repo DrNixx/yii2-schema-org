@@ -16,14 +16,12 @@ use yii\web\View;
 /**
  * Class Module
  *
- * @package simialbi\yii2\schemaorg
- * @author Simon Karlen <simi.albi@gmail.com>
  */
 class Module extends \yii\base\Module implements BootstrapInterface {
 	/**
 	 * @var string the namespace that controller classes are in.
 	 */
-	public $controllerNamespace = 'simialbi\yii2\schemaorg\controllers';
+	public $controllerNamespace = 'onix\schemaorg\controllers';
 
 	/**
 	 * @var string source url
@@ -45,7 +43,7 @@ class Module extends \yii\base\Module implements BootstrapInterface {
 	 */
 	public function bootstrap($app) {
 		if ($app instanceof \yii\console\Application) {
-			$this->controllerNamespace = 'simialbi\yii2\schemaorg\commands';
+			$this->controllerNamespace = 'onix\schemaorg\commands';
 		} else {
 			if ($this->autoCreate) {
 				\Yii::$app->view->on(View::EVENT_END_BODY, function () {
