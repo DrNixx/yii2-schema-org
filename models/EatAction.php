@@ -1,11 +1,11 @@
 <?php
 
-namespace simialbi\yii2\schemaorg\models;
+namespace onix\schemaorg\models;
 
 /**
  * Model for EatAction
  *
- * @package simialbi\yii2\schemaorg\models
+ * @package onix\schemaorg\models
  * @see http://schema.org/EatAction
  */
 class EatAction extends ConsumeAction {

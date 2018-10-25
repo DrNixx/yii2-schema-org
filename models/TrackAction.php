@@ -1,11 +1,11 @@
 <?php
 
-namespace simialbi\yii2\schemaorg\models;
+namespace onix\schemaorg\models;
 
 /**
  * Model for TrackAction
  *
- * @package simialbi\yii2\schemaorg\models
+ * @package onix\schemaorg\models
  * @see http://schema.org/TrackAction
  */
 class TrackAction extends FindAction {

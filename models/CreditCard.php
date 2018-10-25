@@ -1,11 +1,11 @@
 <?php
 
-namespace simialbi\yii2\schemaorg\models;
+namespace onix\schemaorg\models;
 
 /**
  * Model for CreditCard
  *
- * @package simialbi\yii2\schemaorg\models
+ * @package onix\schemaorg\models
  * @see http://schema.org/CreditCard
  */
 class CreditCard extends PaymentCard {

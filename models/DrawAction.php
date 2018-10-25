@@ -1,11 +1,11 @@
 <?php
 
-namespace simialbi\yii2\schemaorg\models;
+namespace onix\schemaorg\models;
 
 /**
  * Model for DrawAction
  *
- * @package simialbi\yii2\schemaorg\models
+ * @package onix\schemaorg\models
  * @see http://schema.org/DrawAction
  */
 class DrawAction extends CreateAction {

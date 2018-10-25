@@ -2,16 +2,18 @@
 /**
  * @link https://github.com/nirvana-msu/yii2-jsonld-helper
  * @link https://github.com/simialbi/yii2-schema-org
+ * @link https://github.com/drnixx/yii2-schema-org
+ * @copyright Copyright (c) 2018 Nick Panteleeff
  * @copyright Copyright (c) 2016 Alexander Stepanov
  * @copyright Copyright (c) 2017 Simon Karlen
  * @license MIT
  */
 
-namespace simialbi\yii2\schemaorg\helpers;
+namespace onix\schemaorg\helpers;
 
-use simialbi\yii2\schemaorg\models\BreadcrumbList;
-use simialbi\yii2\schemaorg\models\ListItem;
-use simialbi\yii2\schemaorg\models\Model;
+use onix\schemaorg\models\BreadcrumbList;
+use onix\schemaorg\models\ListItem;
+use onix\schemaorg\models\Model;
 use yii\base\InvalidArgumentException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -61,13 +63,18 @@ class JsonLDHelper {
 		self::add($breadcrumbList);
 	}
 
-	/**
-	 * Add model to json+ld rendering queue
-	 *
-	 * @param Model $model
-	 */
-	public static function add($model) {
-		self::$models[] = $model;
+    /**
+     * Add model to json+ld rendering queue
+     *
+     * @param Model $model
+     * @param string $key
+     */
+	public static function add($model, $key = null) {
+	    if (empty($key)) {
+	        $key = md5(Json::encode($model));
+        }
+
+		self::$models[$key] = $model;
 	}
 
 	/**
@@ -75,14 +82,19 @@ class JsonLDHelper {
 	 */
 	public static function render() {
 		if (!empty(self::$models)) {
-			foreach (self::$models as $model) {
+		    $parts = [];
+			foreach (self::$models as $key => $model) {
 				try {
-					echo Html::script(Json::encode($model->toJsonLDArray()), ['type' => 'application/ld+json'])."\n";
+                    $parts[] = Json::encode($model->toJsonLDArray());
 				} catch (InvalidArgumentException $e) {
 					$logger = Yii::$app->log->logger;
 					$logger->log($e->getMessage(), $logger::LEVEL_ERROR);
 				}
 			}
+
+			if (count($parts) > 0) {
+                echo Html::script(implode(",\n", $parts), ['type' => 'application/ld+json'])."\n";
+            }
 		}
 	}
 }

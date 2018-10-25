@@ -10,6 +10,10 @@
 	},
 	"authors": [
 		{
+			"name": "Nick Panteleeff",
+			"email": "drnixx@gmail.com"
+		},
+		{
 			"name": "Simon Karlen",
 			"email": "simi.albi@gmail.com"
 		}
@@ -18,16 +22,19 @@
 	"prefer-stable": true,
 	"require": {
 		"php": ">=5.6.0",
+		"ext-dom": "*",
 		"yiisoft/yii2": ">=2.0.5"
 	},
-	"config": {
-		"process-timeout": 1800,
-		"secure-http": false,
-		"fxp-asset": {
-			"enable": false
-		}
-	},
 	"autoload": {
-		"psr-4": { "simialbi\\yii2\\schemaorg\\": "" }
-	}
+		"psr-4": { "onix\\schemaorg\\": "" }
+	},
+	"config": {
+		"platform": {"php": "5.6"}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	]
 }

@@ -1,13 +1,15 @@
 <?php
 /**
  * @link https://github.com/simialbi/yii2-schema-org
+ * @link https://github.com/drnixx/yii2-schema-org
+ * @copyright Copyright (c) 2018 Nick Panteleeff
  * @copyright Copyright (c) 2017 Simon Karlen
  * @license MIT
  */
 
-namespace simialbi\yii2\schemaorg;
+namespace onix\schemaorg;
 
-use simialbi\yii2\schemaorg\helpers\JsonLDHelper;
+use onix\schemaorg\helpers\JsonLDHelper;
 use yii\base\BootstrapInterface;
 use yii\web\View;
 

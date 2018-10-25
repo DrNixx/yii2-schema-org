@@ -1,11 +1,15 @@
 <?php
 /**
+ * @link https://github.com/nirvana-msu/yii2-jsonld-helper
  * @link https://github.com/simialbi/yii2-schema-org
+ * @link https://github.com/drnixx/yii2-schema-org
+ * @copyright Copyright (c) 2018 Nick Panteleeff
+ * @copyright Copyright (c) 2016 Alexander Stepanov
  * @copyright Copyright (c) 2017 Simon Karlen
  * @license MIT
  */
 
-namespace simialbi\yii2\schemaorg\commands;
+namespace onix\schemaorg\commands;
 
 use yii\base\Exception;
 use yii\console\Controller;
@@ -15,10 +19,10 @@ use yii\helpers\Console;
 /**
  * Class SchemaOrgController
  *
- * @package simialbi\yii2\schemaorg\commands
+ * @package onix\schemaorg\commands
  * @author Simon Karlen <simi.albi@gmail.com>
  *
- * @property \simialbi\yii2\schemaorg\Module $module
+ * @property \onix\schemaorg\Module $module
  */
 class SchemaOrgController extends Controller {
 	public $defaultAction = 'generate';
@@ -85,8 +89,8 @@ class SchemaOrgController extends Controller {
 			if (is_array($item)) {
 				$this->generateModelsFromTree($item, $className);
 			} elseif (is_string($item)) {
-				if (preg_match('#<a href="([^"]+)">((?:[A-Z][a-z]+)+)</a>#', $item, $matches)) {
-					$url       = $matches[1];
+				if (preg_match('#<a href="([^"]+)">((?:[A-Za-z]+)+)</a>#', $item, $matches)) {
+					$url       = trim($matches[1], ".");
 					$className = $matches[2];
 
 					$this->stdout("Generate model '{$className}'\n");

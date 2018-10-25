@@ -5,13 +5,13 @@
  * @license MIT
  */
 
-namespace simialbi\yii2\schemaorg\models;
+namespace onix\schemaorg\models;
 
 use yii\helpers\StringHelper;
 
 /**
  * Class Model
- * @package simialbi\yii2\schemaorg\models
+ * @package onix\schemaorg\models
  * @author Simon Karlen <simi.albi@gmail.com>
  */
 class Model extends \yii\base\Model {
