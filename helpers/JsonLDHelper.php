@@ -77,6 +77,20 @@ class JsonLDHelper {
 		self::$models[$key] = $model;
 	}
 
+    /**
+     * Renders specified model as ld+json data
+     *
+     * @param Model $model
+     */
+	public static function output($model)
+    {
+        try {
+            echo Html::script(Json::encode($model->toJsonLDArray()), ['type' => 'application/ld+json'])."\n";
+        } catch (InvalidArgumentException $e) {
+            Yii::error($e->getMessage());
+        }
+    }
+
 	/**
 	 * Renders ld+json data
 	 */
@@ -87,8 +101,7 @@ class JsonLDHelper {
 				try {
                     $parts[] = Json::encode($model->toJsonLDArray());
 				} catch (InvalidArgumentException $e) {
-					$logger = Yii::$app->log->logger;
-					$logger->log($e->getMessage(), $logger::LEVEL_ERROR);
+                    Yii::error($e->getMessage());
 				}
 			}
 
