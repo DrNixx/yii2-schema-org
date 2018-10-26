@@ -106,7 +106,7 @@ class JsonLDHelper {
 			}
 
 			if (count($parts) > 0) {
-                echo Html::script(implode(",\n", $parts), ['type' => 'application/ld+json'])."\n";
+                echo Html::script("[".implode(",\n", $parts)."]", ['type' => 'application/ld+json'])."\n";
             }
 		}
 	}
