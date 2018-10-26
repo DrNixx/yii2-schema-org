@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for QuantitativeValue
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/QuantitativeValue
  */
-class QuantitativeValue extends StructuredValue {
+class QuantitativeValue extends StructuredValue
+{
 	/**
 	* @var PropertyValue A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
 	* 
@@ -38,9 +37,7 @@ class QuantitativeValue extends StructuredValue {
 	public $unitText;
 
 	/**
-	* @var boolean|integer|StructuredValue|string The value of the quantitative value or property value node.
-	* 
-	* For QuantitativeValue and MonetaryAmount, the recommended type for values is 'Number'.
+	* @var boolean|integer|StructuredValue|string The value of the quantitative value or property value node.For QuantitativeValue and MonetaryAmount, the recommended type for values is 'Number'.
 	* For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.
 	*/
 	public $value;

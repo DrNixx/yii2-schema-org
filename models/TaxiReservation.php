@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for TaxiReservation
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/TaxiReservation
  */
-class TaxiReservation extends Reservation {
+class TaxiReservation extends Reservation
+{
 	/**
 	* @var integer|QuantitativeValue Number of people the reservation should accommodate.
 	*/

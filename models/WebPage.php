@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for WebPage
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/WebPage
  */
-class WebPage extends CreativeWork {
+class WebPage extends CreativeWork
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Game
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Game
  */
-class Game extends CreativeWork {
+class Game extends CreativeWork
+{
 	/**
 	* @var Thing A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
 	*/

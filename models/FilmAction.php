@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for FilmAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/FilmAction
  */
-class FilmAction extends CreateAction {
+class FilmAction extends CreateAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

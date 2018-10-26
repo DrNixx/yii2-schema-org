@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BusinessAudience
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BusinessAudience
  */
-class BusinessAudience extends Audience {
+class BusinessAudience extends Audience
+{
 	/**
 	* @var QuantitativeValue The number of employees in an organization e.g. business.
 	*/

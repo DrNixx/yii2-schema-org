@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PaymentCard
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PaymentCard
  */
-class PaymentCard extends PaymentMethod {
+class PaymentCard extends PaymentMethod
+{
 	/**
 	* @var boolean|integer A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
 	*/

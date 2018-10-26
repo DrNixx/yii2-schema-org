@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PeopleAudience
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PeopleAudience
  */
-class PeopleAudience extends Audience {
+class PeopleAudience extends Audience
+{
 	/**
 	* @var MedicalCondition Specifying the health condition(s) of a patient, medical study, or other target audience.
 	*/

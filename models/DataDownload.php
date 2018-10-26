@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for DataDownload
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/DataDownload
  */
-class DataDownload extends MediaObject {
+class DataDownload extends MediaObject
+{
 	/**
 	* @var string A technique or technology used in a Dataset (or DataDownload, DataCatalog),
 	* corresponding to the method used for measuring the corresponding variable(s) (described using variableMeasured). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery.

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for FinancialProduct
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/FinancialProduct
  */
-class FinancialProduct extends Service {
+class FinancialProduct extends Service
+{
 	/**
 	* @var integer|QuantitativeValue The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.
 	*/

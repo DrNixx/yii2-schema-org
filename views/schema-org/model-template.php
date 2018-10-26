@@ -10,12 +10,11 @@ echo "<?php\n";
 namespace onix\schemaorg\models;
 
 /**
- * Model for <?php echo $className."\n";?>
+ * Model for <?php echo "{$className}\n";?>
  *
- * @package onix\schemaorg\models
- * @see <?php echo $url."\n";?>
+ * @see <?php echo "{$url}\n";?>
  */
-class <?php echo $className;?> extends <?php echo $parent;?>
+class <?php echo $className;?> extends <?php echo "{$parent}\n";?>
 {
 <?php
 foreach ($properties as $property) {
@@ -34,6 +33,7 @@ if ($className === 'SearchAction') {
 	* @var string Query input param
 	*/
 	public $query_input = 'required';
+
 <?php
 }
 ?>

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for VideoGameSeries
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/VideoGameSeries
  */
-class VideoGameSeries extends CreativeWorkSeries {
+class VideoGameSeries extends CreativeWorkSeries
+{
 	/**
 	* @var Person An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip. Supersedes actors.
 	*/

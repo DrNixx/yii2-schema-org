@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PaymentChargeSpecification
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PaymentChargeSpecification
  */
-class PaymentChargeSpecification extends PriceSpecification {
+class PaymentChargeSpecification extends PriceSpecification
+{
 	/**
 	* @var DeliveryMethod The delivery method(s) to which the delivery charge or payment charge specification applies.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PropertyValueSpecification
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PropertyValueSpecification
  */
-class PropertyValueSpecification extends Intangible {
+class PropertyValueSpecification extends Intangible
+{
 	/**
 	* @var string|Thing The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.
 	*/

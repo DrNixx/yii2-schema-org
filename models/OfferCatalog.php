@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for OfferCatalog
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/OfferCatalog
  */
-class OfferCatalog extends ItemList {
+class OfferCatalog extends ItemList
+{
 	/**
 	* @var ListItem|string|Thing For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.
 	* 

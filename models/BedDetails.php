@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BedDetails
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BedDetails
  */
-class BedDetails extends Intangible {
+class BedDetails extends Intangible
+{
 	/**
 	* @var integer The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
 	*/

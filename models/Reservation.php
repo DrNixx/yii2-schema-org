@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Reservation
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Reservation
  */
-class Reservation extends Intangible {
+class Reservation extends Intangible
+{
 	/**
 	* @var string The date and time the reservation was booked.
 	*/
@@ -25,7 +24,9 @@ class Reservation extends Intangible {
 	public $modifiedTime;
 
 	/**
-	* @var string The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
+	* @var string The currency of the price, or a price component when attached to PriceSpecification and its subtypes.
+	* 
+	* Use standard formats: ISO 4217 currency format e.g. "USD"; Ticker symbol for cryptocurrencies e.g. "BTC"; well known names for Local Exchange Tradings Systems (LETS) and other currency types e.g. "Ithaca HOUR".
 	*/
 	public $priceCurrency;
 

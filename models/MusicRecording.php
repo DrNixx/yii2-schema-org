@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MusicRecording
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MusicRecording
  */
-class MusicRecording extends CreativeWork {
+class MusicRecording extends CreativeWork
+{
 	/**
 	* @var MusicGroup The artist that performed this album or recording.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for TaxiService
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/TaxiService
  */
-class TaxiService extends Service {
+class TaxiService extends Service
+{
 	/**
 	* @var AggregateRating The overall rating, based on a collection of reviews or ratings, of the item.
 	*/

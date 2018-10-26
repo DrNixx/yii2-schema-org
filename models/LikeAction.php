@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for LikeAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/LikeAction
  */
-class LikeAction extends ReactAction {
+class LikeAction extends ReactAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

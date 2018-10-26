@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MusicComposition
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MusicComposition
  */
-class MusicComposition extends CreativeWork {
+class MusicComposition extends CreativeWork
+{
 	/**
 	* @var Organization|Person The person or organization who wrote a composition, or who is the composer of a work performed at some event.
 	*/

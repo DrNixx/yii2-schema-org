@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ReactAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ReactAction
  */
-class ReactAction extends AssessAction {
+class ReactAction extends AssessAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

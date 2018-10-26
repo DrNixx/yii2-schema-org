@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for DataFeedItem
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/DataFeedItem
  */
-class DataFeedItem extends Intangible {
+class DataFeedItem extends Intangible
+{
 	/**
 	* @var string The date on which the CreativeWork was created or the item was added to a DataFeed.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CheckAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CheckAction
  */
-class CheckAction extends FindAction {
+class CheckAction extends FindAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

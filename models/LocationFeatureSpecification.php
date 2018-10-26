@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for LocationFeatureSpecification
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/LocationFeatureSpecification
  */
-class LocationFeatureSpecification extends PropertyValue {
+class LocationFeatureSpecification extends PropertyValue
+{
 	/**
 	* @var OpeningHoursSpecification The hours during which this service or contact is available.
 	*/

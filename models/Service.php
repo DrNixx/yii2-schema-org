@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Service
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Service
  */
-class Service extends Intangible {
+class Service extends Intangible
+{
 	/**
 	* @var AggregateRating The overall rating, based on a collection of reviews or ratings, of the item.
 	*/

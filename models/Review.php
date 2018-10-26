@@ -1,18 +1,22 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Review
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Review
  */
-class Review extends CreativeWork {
+class Review extends CreativeWork
+{
 	/**
 	* @var Thing The item that is being reviewed/rated.
 	*/
 	public $itemReviewed;
+
+	/**
+	* @var string This Review or Rating is relevant to this part or facet of the itemReviewed.
+	*/
+	public $reviewAspect;
 
 	/**
 	* @var string The actual body of the review.

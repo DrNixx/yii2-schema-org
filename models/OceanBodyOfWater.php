@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for OceanBodyOfWater
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/OceanBodyOfWater
  */
-class OceanBodyOfWater extends BodyOfWater {
+class OceanBodyOfWater extends BodyOfWater
+{
 	/**
 	* @var PropertyValue A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
 	* 

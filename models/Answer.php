@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Answer
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Answer
  */
-class Answer extends Comment {
+class Answer extends Comment
+{
 	/**
 	* @var integer The number of downvotes this question, answer or comment has received from the community.
 	*/

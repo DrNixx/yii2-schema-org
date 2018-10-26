@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for EngineSpecification
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/EngineSpecification
  */
-class EngineSpecification extends StructuredValue {
+class EngineSpecification extends StructuredValue
+{
 	/**
 	* @var QuantitativeValue The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. 
 	* 
@@ -20,9 +19,7 @@ class EngineSpecification extends StructuredValue {
 
 	/**
 	* @var QuantitativeValue The power of the vehicle's engine.
-	*     Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)
-	* 
-	* Note 1: There are many different ways of measuring an engine's power. For an overview, see  http://en.wikipedia.org/wiki/Horsepower#Enginepowertest_codes.
+	*     Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)Note 1: There are many different ways of measuring an engine's power. For an overview, see  http://en.wikipedia.org/wiki/Horsepower#Enginepowertest_codes.
 	* Note 2: You can link to information about how the given value has been determined using the valueReference property.
 	* Note 3: You can use minValue and maxValue to indicate ranges.
 	*/
@@ -41,9 +38,7 @@ class EngineSpecification extends StructuredValue {
 	/**
 	* @var QuantitativeValue The torque (turning force) of the vehicle's engine.
 	* 
-	* Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, or F48 for pound-force per inch
-	* 
-	* Note 1: You can link to information about how the given value has been determined (e.g. reference RPM) using the valueReference property.
+	* Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, or F48 for pound-force per inchNote 1: You can link to information about how the given value has been determined (e.g. reference RPM) using the valueReference property.
 	* Note 2: You can use minValue and maxValue to indicate ranges.
 	*/
 	public $torque;

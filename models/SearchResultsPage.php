@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for SearchResultsPage
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/SearchResultsPage
  */
-class SearchResultsPage extends WebPage {
+class SearchResultsPage extends WebPage
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Periodical
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Periodical
  */
-class Periodical extends CreativeWorkSeries {
+class Periodical extends CreativeWorkSeries
+{
 	/**
 	* @var string The end date and time of the item (in ISO 8601 date format).
 	*/

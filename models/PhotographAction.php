@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PhotographAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PhotographAction
  */
-class PhotographAction extends CreateAction {
+class PhotographAction extends CreateAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

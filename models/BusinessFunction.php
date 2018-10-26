@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BusinessFunction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BusinessFunction
  */
-class BusinessFunction extends Enumeration {
+class BusinessFunction extends Enumeration
+{
 	/**
 	* @var Class|Enumeration|Property Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
 	*/

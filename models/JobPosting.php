@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for JobPosting
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/JobPosting
  */
-class JobPosting extends Intangible {
+class JobPosting extends Intangible
+{
 	/**
 	* @var MonetaryAmount|integer|PriceSpecification The base salary of the job or of an employee in an EmployeeRole.
 	*/
@@ -20,7 +19,7 @@ class JobPosting extends Intangible {
 	public $datePosted;
 
 	/**
-	* @var string Educational background needed for the position.
+	* @var string Educational background needed for the position or Occupation.
 	*/
 	public $educationRequirements;
 
@@ -30,12 +29,12 @@ class JobPosting extends Intangible {
 	public $employmentType;
 
 	/**
-	* @var MonetaryAmount|integer|PriceSpecification A property describing the estimated salary for a job posting based on a variety of variables including, but not limited to industry, job title, and location. The estimated salary is usually computed by outside organizations and therefore the hiring organization is not bound to this estimated salary.
+	* @var MonetaryAmount|MonetaryAmountDistribution|integer|PriceSpecification A property describing the estimated salary for a job posting based on a variety of variables including, but not limited to industry, job title, and location. The estimated salary is usually computed by outside organizations and therefore the hiring organization is not bound to this estimated salary.
 	*/
 	public $estimatedSalary;
 
 	/**
-	* @var string Description of skills and experience needed for the position.
+	* @var string Description of skills and experience needed for the position or Occupation.
 	*/
 	public $experienceRequirements;
 
@@ -70,12 +69,17 @@ class JobPosting extends Intangible {
 	public $occupationalCategory;
 
 	/**
-	* @var string Specific qualifications required for this role.
+	* @var string Specific qualifications required for this role or Occupation.
 	*/
 	public $qualifications;
 
 	/**
-	* @var string Responsibilities associated with this role.
+	* @var Occupation The Occupation for the JobPosting.
+	*/
+	public $relevantOccupation;
+
+	/**
+	* @var string Responsibilities associated with this role or Occupation.
 	*/
 	public $responsibilities;
 

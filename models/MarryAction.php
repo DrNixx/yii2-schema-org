@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MarryAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MarryAction
  */
-class MarryAction extends InteractAction {
+class MarryAction extends InteractAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

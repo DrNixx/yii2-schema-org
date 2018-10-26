@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ImageObject
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ImageObject
  */
-class ImageObject extends MediaObject {
+class ImageObject extends MediaObject
+{
 	/**
 	* @var string The caption for this object.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for DataCatalog
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/DataCatalog
  */
-class DataCatalog extends CreativeWork {
+class DataCatalog extends CreativeWork
+{
 	/**
 	* @var Dataset A dataset contained in this catalog. Inverse property: includedInDataCatalog.
 	*/

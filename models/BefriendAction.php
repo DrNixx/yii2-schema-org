@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BefriendAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BefriendAction
  */
-class BefriendAction extends InteractAction {
+class BefriendAction extends InteractAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

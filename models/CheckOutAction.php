@@ -1,16 +1,15 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CheckOutAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CheckOutAction
  */
-class CheckOutAction extends CommunicateAction {
+class CheckOutAction extends CommunicateAction
+{
 	/**
-	* @var Thing The subject matter of the content.
+	* @var Thing The subject matter of the content. Inverse property: subjectOf.
 	*/
 	public $about;
 

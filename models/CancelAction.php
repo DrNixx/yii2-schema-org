@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CancelAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CancelAction
  */
-class CancelAction extends PlanAction {
+class CancelAction extends PlanAction
+{
 	/**
 	* @var string The time the object is scheduled to.
 	*/

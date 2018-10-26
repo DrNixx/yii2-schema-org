@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Audience
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Audience
  */
-class Audience extends Intangible {
+class Audience extends Intangible
+{
 	/**
 	* @var string The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ExerciseAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ExerciseAction
  */
-class ExerciseAction extends PlayAction {
+class ExerciseAction extends PlayAction
+{
 	/**
 	* @var Diet A sub property of instrument. The diet used in this action.
 	*/

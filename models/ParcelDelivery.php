@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ParcelDelivery
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ParcelDelivery
  */
-class ParcelDelivery extends Intangible {
+class ParcelDelivery extends Intangible
+{
 	/**
 	* @var PostalAddress Destination address.
 	*/

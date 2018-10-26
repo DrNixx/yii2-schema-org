@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MusicPlaylist
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MusicPlaylist
  */
-class MusicPlaylist extends CreativeWork {
+class MusicPlaylist extends CreativeWork
+{
 	/**
 	* @var integer The number of tracks in this album or playlist.
 	*/

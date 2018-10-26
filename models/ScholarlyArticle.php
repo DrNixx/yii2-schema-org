@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ScholarlyArticle
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ScholarlyArticle
  */
-class ScholarlyArticle extends Article {
+class ScholarlyArticle extends Article
+{
 	/**
 	* @var string The actual body of the article.
 	*/
@@ -18,6 +17,11 @@ class ScholarlyArticle extends Article {
 	* @var string Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
 	*/
 	public $articleSection;
+
+	/**
+	* @var CreativeWork|string For an Article, typically a NewsArticle, the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.
+	*/
+	public $backstory;
 
 	/**
 	* @var integer|string The page on which the work ends; for example "138" or "xvi".

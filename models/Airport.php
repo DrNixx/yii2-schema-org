@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Airport
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Airport
  */
-class Airport extends CivicStructure {
+class Airport extends CivicStructure
+{
 	/**
 	* @var string IATA identifier for an airline or airport.
 	*/

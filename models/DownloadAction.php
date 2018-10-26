@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for DownloadAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/DownloadAction
  */
-class DownloadAction extends TransferAction {
+class DownloadAction extends TransferAction
+{
 	/**
 	* @var Place A sub property of location. The original location of the object or the agent before the action.
 	*/

@@ -1,21 +1,22 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for LoanOrCredit
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/LoanOrCredit
  */
-class LoanOrCredit extends FinancialProduct {
+class LoanOrCredit extends FinancialProduct
+{
 	/**
 	* @var MonetaryAmount|integer The amount of money.
 	*/
 	public $amount;
 
 	/**
-	* @var string The currency in which the monetary amount is expressed (in 3-letter ISO 4217 format).
+	* @var string The currency in which the monetary amount is expressed.
+	* 
+	* Use standard formats: ISO 4217 currency format e.g. "USD"; Ticker symbol for cryptocurrencies e.g. "BTC"; well known names for Local Exchange Tradings Systems (LETS) and other currency types e.g. "Ithaca HOUR".
 	*/
 	public $currency;
 

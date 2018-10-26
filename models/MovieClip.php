@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MovieClip
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MovieClip
  */
-class MovieClip extends Clip {
+class MovieClip extends Clip
+{
 	/**
 	* @var Person An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip. Supersedes actors.
 	*/

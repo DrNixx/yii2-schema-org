@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for EmployeeRole
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/EmployeeRole
  */
-class EmployeeRole extends OrganizationRole {
+class EmployeeRole extends OrganizationRole
+{
 	/**
 	* @var MonetaryAmount|integer|PriceSpecification The base salary of the job or of an employee in an EmployeeRole.
 	*/

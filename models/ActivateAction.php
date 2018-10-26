@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ActivateAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ActivateAction
  */
-class ActivateAction extends ControlAction {
+class ActivateAction extends ControlAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

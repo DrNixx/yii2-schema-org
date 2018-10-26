@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BookSeries
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BookSeries
  */
-class BookSeries extends CreativeWorkSeries {
+class BookSeries extends CreativeWorkSeries
+{
 	/**
 	* @var string The end date and time of the item (in ISO 8601 date format).
 	*/

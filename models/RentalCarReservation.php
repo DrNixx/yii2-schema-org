@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for RentalCarReservation
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/RentalCarReservation
  */
-class RentalCarReservation extends Reservation {
+class RentalCarReservation extends Reservation
+{
 	/**
 	* @var Place Where a rental car can be dropped off.
 	*/

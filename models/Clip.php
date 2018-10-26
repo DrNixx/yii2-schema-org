@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Clip
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Clip
  */
-class Clip extends CreativeWork {
+class Clip extends CreativeWork
+{
 	/**
 	* @var Person An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip. Supersedes actors.
 	*/

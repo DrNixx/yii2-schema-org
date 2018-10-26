@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BedAndBreakfast
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BedAndBreakfast
  */
-class BedAndBreakfast extends LodgingBusiness {
+class BedAndBreakfast extends LodgingBusiness
+{
 	/**
 	* @var LocationFeatureSpecification An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
 	*/

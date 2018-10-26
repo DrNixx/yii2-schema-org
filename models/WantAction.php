@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for WantAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/WantAction
  */
-class WantAction extends ReactAction {
+class WantAction extends ReactAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

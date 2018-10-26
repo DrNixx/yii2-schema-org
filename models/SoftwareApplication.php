@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for SoftwareApplication
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/SoftwareApplication
  */
-class SoftwareApplication extends CreativeWork {
+class SoftwareApplication extends CreativeWork
+{
 	/**
 	* @var string Type of software application, e.g. 'Game, Multimedia'.
 	*/

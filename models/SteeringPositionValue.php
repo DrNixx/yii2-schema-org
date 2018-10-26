@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for SteeringPositionValue
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/SteeringPositionValue
  */
-class SteeringPositionValue extends QualitativeValue {
+class SteeringPositionValue extends QualitativeValue
+{
 	/**
 	* @var PropertyValue A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
 	* 

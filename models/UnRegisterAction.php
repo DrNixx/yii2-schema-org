@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for UnRegisterAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/UnRegisterAction
  */
-class UnRegisterAction extends InteractAction {
+class UnRegisterAction extends InteractAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ApplyAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ApplyAction
  */
-class ApplyAction extends OrganizeAction {
+class ApplyAction extends OrganizeAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

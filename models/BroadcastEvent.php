@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BroadcastEvent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BroadcastEvent
  */
-class BroadcastEvent extends PublicationEvent {
+class BroadcastEvent extends PublicationEvent
+{
 	/**
 	* @var Event The event being broadcast such as a sporting event or awards ceremony.
 	*/

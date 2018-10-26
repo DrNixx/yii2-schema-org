@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ServiceChannel
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ServiceChannel
  */
-class ServiceChannel extends Intangible {
+class ServiceChannel extends Intangible
+{
 	/**
 	* @var Language|string A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. See also inLanguage
 	*/

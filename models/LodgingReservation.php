@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for LodgingReservation
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/LodgingReservation
  */
-class LodgingReservation extends Reservation {
+class LodgingReservation extends Reservation
+{
 	/**
 	* @var string The earliest someone may check into a lodging establishment.
 	*/

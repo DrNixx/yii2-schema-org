@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MeetingRoom
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MeetingRoom
  */
-class MeetingRoom extends Room {
+class MeetingRoom extends Room
+{
 	/**
 	* @var LocationFeatureSpecification An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
 	*/
@@ -21,7 +20,7 @@ class MeetingRoom extends Room {
 	public $floorSize;
 
 	/**
-	* @var integer|QuantitativeValue The number of rooms (excluding bathrooms and closets) of the acccommodation or lodging business.
+	* @var integer|QuantitativeValue The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
 	* Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
 	*/
 	public $numberOfRooms;

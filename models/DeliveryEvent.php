@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for DeliveryEvent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/DeliveryEvent
  */
-class DeliveryEvent extends Event {
+class DeliveryEvent extends Event
+{
 	/**
 	* @var string Password, PIN, or access code needed for delivery (e.g. from a locker).
 	*/

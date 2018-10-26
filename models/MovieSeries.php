@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MovieSeries
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MovieSeries
  */
-class MovieSeries extends CreativeWorkSeries {
+class MovieSeries extends CreativeWorkSeries
+{
 	/**
 	* @var Person An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip. Supersedes actors.
 	*/

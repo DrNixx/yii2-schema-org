@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for SportsEvent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/SportsEvent
  */
-class SportsEvent extends Event {
+class SportsEvent extends Event
+{
 	/**
 	* @var Person|SportsTeam The away team in a sports event.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Menu
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Menu
  */
-class Menu extends CreativeWork {
+class Menu extends CreativeWork
+{
 	/**
 	* @var MenuItem A food or drink item contained in a menu or menu section.
 	*/

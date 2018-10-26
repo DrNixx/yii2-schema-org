@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PublicationIssue
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PublicationIssue
  */
-class PublicationIssue extends CreativeWork {
+class PublicationIssue extends CreativeWork
+{
 	/**
 	* @var integer|string Identifies the issue of publication; for example, "iii" or "2".
 	*/

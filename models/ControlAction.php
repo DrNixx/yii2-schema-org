@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ControlAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ControlAction
  */
-class ControlAction extends Action {
+class ControlAction extends Action
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

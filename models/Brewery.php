@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Brewery
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Brewery
  */
-class Brewery extends FoodEstablishment {
+class Brewery extends FoodEstablishment
+{
 	/**
 	* @var boolean|string Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings Yes or No.
 	*/

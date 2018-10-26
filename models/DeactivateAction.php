@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for DeactivateAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/DeactivateAction
  */
-class DeactivateAction extends ControlAction {
+class DeactivateAction extends ControlAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

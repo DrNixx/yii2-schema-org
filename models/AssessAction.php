@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for AssessAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/AssessAction
  */
-class AssessAction extends Action {
+class AssessAction extends Action
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

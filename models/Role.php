@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Role
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Role
  */
-class Role extends Intangible {
+class Role extends Intangible
+{
 	/**
 	* @var string The end date and time of the item (in ISO 8601 date format).
 	*/

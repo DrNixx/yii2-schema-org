@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CheckoutPage
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CheckoutPage
  */
-class CheckoutPage extends WebPage {
+class CheckoutPage extends WebPage
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

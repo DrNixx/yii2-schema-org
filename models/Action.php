@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Action
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Action
  */
-class Action extends Thing {
+class Action extends Thing
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

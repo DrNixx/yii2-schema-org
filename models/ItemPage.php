@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ItemPage
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ItemPage
  */
-class ItemPage extends WebPage {
+class ItemPage extends WebPage
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

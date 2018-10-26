@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ProgramMembership
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ProgramMembership
  */
-class ProgramMembership extends Intangible {
+class ProgramMembership extends Intangible
+{
 	/**
 	* @var Organization The organization (airline, travelers' club, etc.) the membership is made with.
 	*/

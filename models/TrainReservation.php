@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for TrainReservation
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/TrainReservation
  */
-class TrainReservation extends Reservation {
+class TrainReservation extends Reservation
+{
 	/**
 	* @var string The date and time the reservation was booked.
 	*/
@@ -25,7 +24,9 @@ class TrainReservation extends Reservation {
 	public $modifiedTime;
 
 	/**
-	* @var string The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
+	* @var string The currency of the price, or a price component when attached to PriceSpecification and its subtypes.
+	* 
+	* Use standard formats: ISO 4217 currency format e.g. "USD"; Ticker symbol for cryptocurrencies e.g. "BTC"; well known names for Local Exchange Tradings Systems (LETS) and other currency types e.g. "Ithaca HOUR".
 	*/
 	public $priceCurrency;
 

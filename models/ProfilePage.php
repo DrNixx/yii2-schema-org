@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ProfilePage
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ProfilePage
  */
-class ProfilePage extends WebPage {
+class ProfilePage extends WebPage
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

@@ -1,26 +1,25 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for HowToDirection
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/HowToDirection
  */
-class HowToDirection extends ListItem {
+class HowToDirection extends CreativeWork
+{
 	/**
-	* @var MediaObject A media object representing the circumstances after performing this direction.
+	* @var MediaObject|string A media object representing the circumstances after performing this direction.
 	*/
 	public $afterMedia;
 
 	/**
-	* @var MediaObject A media object representing the circumstances before performing this direction.
+	* @var MediaObject|string A media object representing the circumstances before performing this direction.
 	*/
 	public $beforeMedia;
 
 	/**
-	* @var MediaObject A media object representing the circumstances while performing this direction.
+	* @var MediaObject|string A media object representing the circumstances while performing this direction.
 	*/
 	public $duringMedia;
 

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Book
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Book
  */
-class Book extends CreativeWork {
+class Book extends CreativeWork
+{
 	/**
 	* @var boolean Indicates whether the book is an abridged edition.
 	*/

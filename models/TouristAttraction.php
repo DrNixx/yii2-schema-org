@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for TouristAttraction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/TouristAttraction
  */
-class TouristAttraction extends Place {
+class TouristAttraction extends Place
+{
 	/**
 	* @var Language|string A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. See also inLanguage
 	*/

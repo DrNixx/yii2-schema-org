@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CookAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CookAction
  */
-class CookAction extends CreateAction {
+class CookAction extends CreateAction
+{
 	/**
 	* @var FoodEstablishment|Place A sub property of location. The specific food establishment where the action occurred.
 	*/

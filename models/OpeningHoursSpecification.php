@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for OpeningHoursSpecification
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/OpeningHoursSpecification
  */
-class OpeningHoursSpecification extends StructuredValue {
+class OpeningHoursSpecification extends StructuredValue
+{
 	/**
 	* @var string The closing hour of the place or service on the given day(s) of the week.
 	*/

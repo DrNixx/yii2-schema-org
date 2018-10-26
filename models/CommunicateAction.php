@@ -1,16 +1,15 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CommunicateAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CommunicateAction
  */
-class CommunicateAction extends InteractAction {
+class CommunicateAction extends InteractAction
+{
 	/**
-	* @var Thing The subject matter of the content.
+	* @var Thing The subject matter of the content. Inverse property: subjectOf.
 	*/
 	public $about;
 

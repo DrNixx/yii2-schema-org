@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PayAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PayAction
  */
-class PayAction extends TradeAction {
+class PayAction extends TradeAction
+{
 	/**
 	* @var MedicalDevicePurpose|Thing A goal towards an action is taken. Can be concrete or abstract.
 	*/

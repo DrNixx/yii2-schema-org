@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for TakeAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/TakeAction
  */
-class TakeAction extends TransferAction {
+class TakeAction extends TransferAction
+{
 	/**
 	* @var Place A sub property of location. The original location of the object or the agent before the action.
 	*/

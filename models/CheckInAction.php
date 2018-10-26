@@ -1,16 +1,15 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CheckInAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CheckInAction
  */
-class CheckInAction extends CommunicateAction {
+class CheckInAction extends CommunicateAction
+{
 	/**
-	* @var Thing The subject matter of the content.
+	* @var Thing The subject matter of the content. Inverse property: subjectOf.
 	*/
 	public $about;
 

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for GeoCoordinates
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/GeoCoordinates
  */
-class GeoCoordinates extends StructuredValue {
+class GeoCoordinates extends StructuredValue
+{
 	/**
 	* @var PostalAddress|string Physical address of the item.
 	*/

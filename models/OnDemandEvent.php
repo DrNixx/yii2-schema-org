@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for OnDemandEvent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/OnDemandEvent
  */
-class OnDemandEvent extends PublicationEvent {
+class OnDemandEvent extends PublicationEvent
+{
 	/**
 	* @var boolean A flag to signal that the item, event, or place is accessible for free. Supersedes free.
 	*/

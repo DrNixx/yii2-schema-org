@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PublicationVolume
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PublicationVolume
  */
-class PublicationVolume extends CreativeWork {
+class PublicationVolume extends CreativeWork
+{
 	/**
 	* @var integer|string The page on which the work ends; for example "138" or "xvi".
 	*/

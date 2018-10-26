@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Continent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Continent
  */
-class Continent extends Landform {
+class Continent extends Landform
+{
 	/**
 	* @var PropertyValue A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
 	* 

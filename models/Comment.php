@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Comment
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Comment
  */
-class Comment extends CreativeWork {
+class Comment extends CreativeWork
+{
 	/**
 	* @var integer The number of downvotes this question, answer or comment has received from the community.
 	*/

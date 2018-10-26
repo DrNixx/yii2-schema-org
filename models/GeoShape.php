@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for GeoShape
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/GeoShape
  */
-class GeoShape extends StructuredValue {
+class GeoShape extends StructuredValue
+{
 	/**
 	* @var PostalAddress|string Physical address of the item.
 	*/

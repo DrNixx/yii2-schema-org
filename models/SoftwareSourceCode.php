@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for SoftwareSourceCode
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/SoftwareSourceCode
  */
-class SoftwareSourceCode extends CreativeWork {
+class SoftwareSourceCode extends CreativeWork
+{
 	/**
 	* @var string Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).
 	*/

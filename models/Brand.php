@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Brand
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Brand
  */
-class Brand extends Intangible {
+class Brand extends Intangible
+{
 	/**
 	* @var AggregateRating The overall rating, based on a collection of reviews or ratings, of the item.
 	*/

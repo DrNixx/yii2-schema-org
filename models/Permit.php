@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Permit
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Permit
  */
-class Permit extends Intangible {
+class Permit extends Intangible
+{
 	/**
 	* @var Organization The organization issuing the ticket or permit.
 	*/

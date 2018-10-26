@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for SubscribeAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/SubscribeAction
  */
-class SubscribeAction extends InteractAction {
+class SubscribeAction extends InteractAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

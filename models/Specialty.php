@@ -1,17 +1,11 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Specialty
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Specialty
  */
-class Specialty extends Enumeration {
-	/**
-	* @var Class|Enumeration|Property Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
-	*/
-	public $supersededBy;
-
+class Specialty extends Enumeration
+{
 }

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for AggregateOffer
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/AggregateOffer
  */
-class AggregateOffer extends Offer {
+class AggregateOffer extends Offer
+{
 	/**
 	* @var integer|string The highest price of all offers available.
 	*/

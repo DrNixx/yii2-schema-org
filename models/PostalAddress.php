@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PostalAddress
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PostalAddress
  */
-class PostalAddress extends ContactPoint {
+class PostalAddress extends ContactPoint
+{
 	/**
 	* @var Country|string The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
 	*/

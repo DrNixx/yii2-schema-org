@@ -1,16 +1,15 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for VisualArtsEvent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/VisualArtsEvent
  */
-class VisualArtsEvent extends Event {
+class VisualArtsEvent extends Event
+{
 	/**
-	* @var Thing The subject matter of the content.
+	* @var Thing The subject matter of the content. Inverse property: subjectOf.
 	*/
 	public $about;
 

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Message
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Message
  */
-class Message extends CreativeWork {
+class Message extends CreativeWork
+{
 	/**
 	* @var ContactPoint|Organization|Person A sub property of recipient. The recipient blind copied on a message.
 	*/

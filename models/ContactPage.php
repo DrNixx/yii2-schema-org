@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ContactPage
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ContactPage
  */
-class ContactPage extends WebPage {
+class ContactPage extends WebPage
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CollectionPage
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CollectionPage
  */
-class CollectionPage extends WebPage {
+class CollectionPage extends WebPage
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Invoice
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Invoice
  */
-class Invoice extends Intangible {
+class Invoice extends Intangible
+{
 	/**
 	* @var string The identifier for the account the payment will be applied to.
 	*/

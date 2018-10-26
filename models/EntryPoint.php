@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for EntryPoint
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/EntryPoint
  */
-class EntryPoint extends Intangible {
+class EntryPoint extends Intangible
+{
 	/**
 	* @var SoftwareApplication An application that can complete the request. Supersedes application.
 	*/

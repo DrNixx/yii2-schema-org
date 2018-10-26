@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for TieAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/TieAction
  */
-class TieAction extends AchieveAction {
+class TieAction extends AchieveAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BroadcastService
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BroadcastService
  */
-class BroadcastService extends Service {
+class BroadcastService extends Service
+{
 	/**
 	* @var Organization The media network(s) whose content is broadcast on this station.
 	*/

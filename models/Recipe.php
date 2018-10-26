@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Recipe
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Recipe
  */
-class Recipe extends HowTo {
+class Recipe extends HowTo
+{
 	/**
 	* @var Duration The time it takes to actually cook the dish, in ISO 8601 duration format.
 	*/

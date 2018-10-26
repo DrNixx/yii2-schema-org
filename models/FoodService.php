@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for FoodService
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/FoodService
  */
-class FoodService extends Service {
+class FoodService extends Service
+{
 	/**
 	* @var AggregateRating The overall rating, based on a collection of reviews or ratings, of the item.
 	*/

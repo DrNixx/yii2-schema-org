@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CreateAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CreateAction
  */
-class CreateAction extends Action {
+class CreateAction extends Action
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

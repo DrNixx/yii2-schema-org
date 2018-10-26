@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for GameServerStatus
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/GameServerStatus
  */
-class GameServerStatus extends Enumeration {
+class GameServerStatus extends Enumeration
+{
 	/**
 	* @var Class|Enumeration|Property Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
 	*/

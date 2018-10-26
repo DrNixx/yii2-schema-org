@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for RentAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/RentAction
  */
-class RentAction extends TradeAction {
+class RentAction extends TradeAction
+{
 	/**
 	* @var Organization|Person A sub property of participant. The owner of the real estate property.
 	*/

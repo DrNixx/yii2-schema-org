@@ -1,16 +1,15 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for FoodEvent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/FoodEvent
  */
-class FoodEvent extends Event {
+class FoodEvent extends Event
+{
 	/**
-	* @var Thing The subject matter of the content.
+	* @var Thing The subject matter of the content. Inverse property: subjectOf.
 	*/
 	public $about;
 

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for OrderItem
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/OrderItem
  */
-class OrderItem extends Intangible {
+class OrderItem extends Intangible
+{
 	/**
 	* @var ParcelDelivery The delivery of the parcel related to this order or order item.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for NutritionInformation
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/NutritionInformation
  */
-class NutritionInformation extends StructuredValue {
+class NutritionInformation extends StructuredValue
+{
 	/**
 	* @var Energy The number of calories.
 	*/

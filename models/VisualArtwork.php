@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for VisualArtwork
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/VisualArtwork
  */
-class VisualArtwork extends CreativeWork {
+class VisualArtwork extends CreativeWork
+{
 	/**
 	* @var integer|string The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
 	*/

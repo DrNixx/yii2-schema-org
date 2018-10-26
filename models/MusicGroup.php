@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MusicGroup
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MusicGroup
  */
-class MusicGroup extends PerformingGroup {
+class MusicGroup extends PerformingGroup
+{
 	/**
 	* @var MusicAlbum A music album. Supersedes albums.
 	*/

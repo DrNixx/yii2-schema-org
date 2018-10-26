@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Product
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Product
  */
-class Product extends Thing {
+class Product extends Thing
+{
 	/**
 	* @var PropertyValue A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
 	* 
@@ -37,7 +36,7 @@ class Product extends Thing {
 	public $brand;
 
 	/**
-	* @var string|Thing A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+	* @var PhysicalActivityCategory|string|Thing A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
 	*/
 	public $category;
 

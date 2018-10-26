@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ProductModel
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ProductModel
  */
-class ProductModel extends Product {
+class ProductModel extends Product
+{
 	/**
 	* @var ProductModel A pointer to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive.
 	*/

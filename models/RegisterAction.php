@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for RegisterAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/RegisterAction
  */
-class RegisterAction extends InteractAction {
+class RegisterAction extends InteractAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for TrainTrip
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/TrainTrip
  */
-class TrainTrip extends Intangible {
+class TrainTrip extends Trip
+{
 	/**
 	* @var string The platform where the train arrives.
 	*/
@@ -20,11 +19,6 @@ class TrainTrip extends Intangible {
 	public $arrivalStation;
 
 	/**
-	* @var string The expected arrival time.
-	*/
-	public $arrivalTime;
-
-	/**
 	* @var string The platform from which the train departs.
 	*/
 	public $departurePlatform;
@@ -33,16 +27,6 @@ class TrainTrip extends Intangible {
 	* @var TrainStation The station from which the train departs.
 	*/
 	public $departureStation;
-
-	/**
-	* @var string The expected departure time.
-	*/
-	public $departureTime;
-
-	/**
-	* @var Organization|Person The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.
-	*/
-	public $provider;
 
 	/**
 	* @var string The name of the train (e.g. The Orient Express).

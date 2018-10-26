@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for EmailMessage
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/EmailMessage
  */
-class EmailMessage extends Message {
+class EmailMessage extends Message
+{
 	/**
 	* @var ContactPoint|Organization|Person A sub property of recipient. The recipient blind copied on a message.
 	*/

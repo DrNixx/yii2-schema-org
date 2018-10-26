@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for OwnershipInfo
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/OwnershipInfo
  */
-class OwnershipInfo extends StructuredValue {
+class OwnershipInfo extends StructuredValue
+{
 	/**
 	* @var Organization|Person The organization or person from which the product was acquired.
 	*/

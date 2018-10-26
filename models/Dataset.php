@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Dataset
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Dataset
  */
-class Dataset extends CreativeWork {
+class Dataset extends CreativeWork
+{
 	/**
 	* @var DataDownload A downloadable form of this dataset, at a specific location, in a specific format.
 	*/

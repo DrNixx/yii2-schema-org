@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ScreeningEvent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ScreeningEvent
  */
-class ScreeningEvent extends Event {
+class ScreeningEvent extends Event
+{
 	/**
 	* @var Language|string Languages in which subtitles/captions are available, in IETF BCP 47 standard format.
 	*/

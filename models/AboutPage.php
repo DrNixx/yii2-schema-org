@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for AboutPage
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/AboutPage
  */
-class AboutPage extends WebPage {
+class AboutPage extends WebPage
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

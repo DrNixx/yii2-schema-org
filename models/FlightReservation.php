@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for FlightReservation
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/FlightReservation
  */
-class FlightReservation extends Reservation {
+class FlightReservation extends Reservation
+{
 	/**
 	* @var string The airline-specific indicator of boarding order / preference.
 	*/

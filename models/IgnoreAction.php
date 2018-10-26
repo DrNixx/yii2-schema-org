@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for IgnoreAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/IgnoreAction
  */
-class IgnoreAction extends AssessAction {
+class IgnoreAction extends AssessAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

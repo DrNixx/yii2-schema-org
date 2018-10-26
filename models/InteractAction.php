@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for InteractAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/InteractAction
  */
-class InteractAction extends Action {
+class InteractAction extends Action
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

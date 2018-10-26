@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Dentist
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Dentist
  */
-class Dentist extends LocalBusiness {
+class Dentist extends LocalBusiness
+{
 	/**
 	* @var string Name or unique ID of network. (Networks are often reused across different insurance plans).
 	*/

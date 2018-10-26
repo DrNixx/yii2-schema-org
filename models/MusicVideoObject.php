@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MusicVideoObject
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MusicVideoObject
  */
-class MusicVideoObject extends MediaObject {
+class MusicVideoObject extends MediaObject
+{
 	/**
 	* @var NewsArticle A NewsArticle associated with the Media Object.
 	*/
@@ -45,7 +44,11 @@ class MusicVideoObject extends MediaObject {
 	public $encodesCreativeWork;
 
 	/**
-	* @var string mp3, mpeg4, etc.
+	* @var string Media type typically expressed using a MIME format (see IANA site and MDN reference) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
+	* 
+	* In cases where a CreativeWork has several media type representations, encoding can be used to indicate each MediaObject alongside particular encodingFormat information.
+	* 
+	* Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry. Supersedes fileFormat.
 	*/
 	public $encodingFormat;
 
@@ -70,7 +73,7 @@ class MusicVideoObject extends MediaObject {
 	public $regionsAllowed;
 
 	/**
-	* @var boolean Indicates if use of the media require a subscription  (either paid or free). Allowed values are true or false (note that an earlier version had 'yes', 'no').
+	* @var boolean|MediaSubscription Indicates if use of the media require a subscription  (either paid or free). Allowed values are true or false (note that an earlier version had 'yes', 'no').
 	*/
 	public $requiresSubscription;
 

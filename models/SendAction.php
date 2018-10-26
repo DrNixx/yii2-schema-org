@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for SendAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/SendAction
  */
-class SendAction extends TransferAction {
+class SendAction extends TransferAction
+{
 	/**
 	* @var DeliveryMethod A sub property of instrument. The method of delivery.
 	*/

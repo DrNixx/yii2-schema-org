@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ResumeAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ResumeAction
  */
-class ResumeAction extends ControlAction {
+class ResumeAction extends ControlAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

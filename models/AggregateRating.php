@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for AggregateRating
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/AggregateRating
  */
-class AggregateRating extends Rating {
+class AggregateRating extends Rating
+{
 	/**
 	* @var Thing The item that is being reviewed/rated.
 	*/

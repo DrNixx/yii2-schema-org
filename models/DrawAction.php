@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for DrawAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/DrawAction
  */
-class DrawAction extends CreateAction {
+class DrawAction extends CreateAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

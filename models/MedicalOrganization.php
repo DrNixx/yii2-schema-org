@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MedicalOrganization
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MedicalOrganization
  */
-class MedicalOrganization extends Organization {
+class MedicalOrganization extends Organization
+{
 	/**
 	* @var string Name or unique ID of network. (Networks are often reused across different insurance plans).
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ReceiveAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ReceiveAction
  */
-class ReceiveAction extends TransferAction {
+class ReceiveAction extends TransferAction
+{
 	/**
 	* @var DeliveryMethod A sub property of instrument. The method of delivery.
 	*/

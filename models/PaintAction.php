@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PaintAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PaintAction
  */
-class PaintAction extends CreateAction {
+class PaintAction extends CreateAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for GovernmentPermit
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/GovernmentPermit
  */
-class GovernmentPermit extends Permit {
+class GovernmentPermit extends Permit
+{
 	/**
 	* @var Organization The organization issuing the ticket or permit.
 	*/

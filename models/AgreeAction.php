@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for AgreeAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/AgreeAction
  */
-class AgreeAction extends ReactAction {
+class AgreeAction extends ReactAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for HowTo
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/HowTo
  */
-class HowTo extends CreativeWork {
+class HowTo extends CreativeWork
+{
 	/**
 	* @var MonetaryAmount|string The estimated cost of the supply or supplies consumed when performing instructions.
 	*/
@@ -25,9 +24,9 @@ class HowTo extends CreativeWork {
 	public $prepTime;
 
 	/**
-	* @var CreativeWork|ItemList|string The steps in the form of a single item (text, document, video, etc.) or an ordered list with HowToStep and/or HowToSection items.
+	* @var CreativeWork|HowToSection|HowToStep|string A single step item (as HowToStep, text, document, video, etc.) or a HowToSection. Supersedes steps.
 	*/
-	public $steps;
+	public $step;
 
 	/**
 	* @var HowToSupply|string A sub-property of instrument. A supply consumed when performing instructions or a direction.

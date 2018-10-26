@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for RsvpAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/RsvpAction
  */
-class RsvpAction extends InformAction {
+class RsvpAction extends InformAction
+{
 	/**
 	* @var integer If responding yes, the number of guests who will attend in addition to the invitee.
 	*/

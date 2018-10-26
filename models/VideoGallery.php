@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for VideoGallery
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/VideoGallery
  */
-class VideoGallery extends CollectionPage {
+class VideoGallery extends CollectionPage
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

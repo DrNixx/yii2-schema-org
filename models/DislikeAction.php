@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for DislikeAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/DislikeAction
  */
-class DislikeAction extends ReactAction {
+class DislikeAction extends ReactAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

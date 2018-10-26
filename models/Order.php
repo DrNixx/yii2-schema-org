@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Order
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Order
  */
-class Order extends Intangible {
+class Order extends Intangible
+{
 	/**
 	* @var Offer The offer(s) -- e.g., product, quantity and price combinations -- included in the order.
 	*/
@@ -45,7 +44,9 @@ class Order extends Intangible {
 	public $discountCode;
 
 	/**
-	* @var string The currency (in 3-letter ISO 4217 format) of the discount.
+	* @var string The currency of the discount.
+	* 
+	* Use standard formats: ISO 4217 currency format e.g. "USD"; Ticker symbol for cryptocurrencies e.g. "BTC"; well known names for Local Exchange Tradings Systems (LETS) and other currency types e.g. "Ithaca HOUR".
 	*/
 	public $discountCurrency;
 

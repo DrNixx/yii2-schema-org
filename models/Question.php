@@ -1,16 +1,15 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Question
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Question
  */
-class Question extends CreativeWork {
+class Question extends CreativeWork
+{
 	/**
-	* @var Answer The answer that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.
+	* @var Answer|ItemList The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.
 	*/
 	public $acceptedAnswer;
 
@@ -25,7 +24,7 @@ class Question extends CreativeWork {
 	public $downvoteCount;
 
 	/**
-	* @var Answer An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.
+	* @var Answer|ItemList An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.
 	*/
 	public $suggestedAnswer;
 

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PublicationEvent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PublicationEvent
  */
-class PublicationEvent extends Event {
+class PublicationEvent extends Event
+{
 	/**
 	* @var boolean A flag to signal that the item, event, or place is accessible for free. Supersedes free.
 	*/

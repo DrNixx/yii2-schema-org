@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Demand
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Demand
  */
-class Demand extends Intangible {
+class Demand extends Intangible
+{
 	/**
 	* @var LoanOrCredit|PaymentMethod The payment method(s) accepted by seller for this offer.
 	*/

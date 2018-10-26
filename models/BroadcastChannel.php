@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BroadcastChannel
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BroadcastChannel
  */
-class BroadcastChannel extends Intangible {
+class BroadcastChannel extends Intangible
+{
 	/**
 	* @var string The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
 	*/

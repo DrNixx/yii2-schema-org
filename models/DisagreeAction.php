@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for DisagreeAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/DisagreeAction
  */
-class DisagreeAction extends ReactAction {
+class DisagreeAction extends ReactAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

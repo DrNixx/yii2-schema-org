@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Course
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Course
  */
-class Course extends CreativeWork {
+class Course extends CreativeWork
+{
 	/**
 	* @var string The identifier for the Course used by the course provider (e.g. CS101 or 6.001).
 	*/

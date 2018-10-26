@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for AchieveAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/AchieveAction
  */
-class AchieveAction extends Action {
+class AchieveAction extends Action
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

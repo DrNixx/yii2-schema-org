@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BookmarkAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BookmarkAction
  */
-class BookmarkAction extends OrganizeAction {
+class BookmarkAction extends OrganizeAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

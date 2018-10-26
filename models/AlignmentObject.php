@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for AlignmentObject
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/AlignmentObject
  */
-class AlignmentObject extends Intangible {
+class AlignmentObject extends Intangible
+{
 	/**
 	* @var string A category of alignment between the learning resource and the framework node. Recommended values include: 'assesses', 'teaches', 'requires', 'textComplexity', 'readingLevel', 'educationalSubject', and 'educationalLevel'.
 	*/

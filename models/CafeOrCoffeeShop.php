@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CafeOrCoffeeShop
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CafeOrCoffeeShop
  */
-class CafeOrCoffeeShop extends FoodEstablishment {
+class CafeOrCoffeeShop extends FoodEstablishment
+{
 	/**
 	* @var boolean|string Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings Yes or No.
 	*/

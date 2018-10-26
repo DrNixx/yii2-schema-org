@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for BankAccount
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/BankAccount
  */
-class BankAccount extends FinancialProduct {
+class BankAccount extends FinancialProduct
+{
 	/**
 	* @var MonetaryAmount A minimum amount that has to be paid in every month.
 	*/

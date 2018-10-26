@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MusicRelease
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MusicRelease
  */
-class MusicRelease extends MusicPlaylist {
+class MusicRelease extends MusicPlaylist
+{
 	/**
 	* @var string The catalog number for the release.
 	*/

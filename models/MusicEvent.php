@@ -1,16 +1,15 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MusicEvent
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MusicEvent
  */
-class MusicEvent extends Event {
+class MusicEvent extends Event
+{
 	/**
-	* @var Thing The subject matter of the content.
+	* @var Thing The subject matter of the content. Inverse property: subjectOf.
 	*/
 	public $about;
 

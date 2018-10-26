@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Organization
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Organization
  */
-class Organization extends Thing {
+class Organization extends Thing
+{
 	/**
 	* @var CreativeWork|string For a NewsMediaOrganization or other news-related Organization, a statement about public engagement activities (for news media, the newsroom’s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.
 	*/
@@ -68,6 +67,11 @@ class Organization extends Thing {
 	* @var CreativeWork|string Statement on diversity policy by an Organization e.g. a NewsMediaOrganization. For a NewsMediaOrganization, a statement describing the newsroom’s diversity policy on both staffing and sources, typically providing staffing data.
 	*/
 	public $diversityPolicy;
+
+	/**
+	* @var Article|string For an Organization (often but not necessarily a NewsMediaOrganization), a report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported.
+	*/
+	public $diversityStaffingReport;
 
 	/**
 	* @var string The Dun & Bradstreet DUNS number for identifying an organization or business person.
@@ -140,6 +144,16 @@ class Organization extends Thing {
 	public $isicV4;
 
 	/**
+	* @var string|Thing|string Of a Person, and less typically of an Organization, to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or yet relate this to educational content, events, objectives or JobPosting descriptions.
+	*/
+	public $knowsAbout;
+
+	/**
+	* @var Language|string Of a Person, and less typically of an Organization, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the IETF BCP 47 standard.
+	*/
+	public $knowsLanguage;
+
+	/**
 	* @var string The official name of the organization, e.g. the registered company name.
 	*/
 	public $legalName;
@@ -183,6 +197,11 @@ class Organization extends Thing {
 	* @var QuantitativeValue The number of employees in an organization e.g. business.
 	*/
 	public $numberOfEmployees;
+
+	/**
+	* @var AboutPage|CreativeWork|string For an Organization (often but not necessarily a NewsMediaOrganization), a description of organizational ownership structure; funding and grants. In a news/media setting, this is with particular reference to editorial independence.   Note that the funder is also available and can be used to make basic funder information machine-readable.
+	*/
+	public $ownershipFundingInfo;
 
 	/**
 	* @var OwnershipInfo|Product Products owned by the organization or person.

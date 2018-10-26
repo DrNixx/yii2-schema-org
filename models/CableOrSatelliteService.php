@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CableOrSatelliteService
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CableOrSatelliteService
  */
-class CableOrSatelliteService extends Service {
+class CableOrSatelliteService extends Service
+{
 	/**
 	* @var AggregateRating The overall rating, based on a collection of reviews or ratings, of the item.
 	*/

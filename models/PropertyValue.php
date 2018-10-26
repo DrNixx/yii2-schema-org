@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for PropertyValue
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/PropertyValue
  */
-class PropertyValue extends StructuredValue {
+class PropertyValue extends StructuredValue
+{
 	/**
 	* @var integer The upper value of some characteristic or property.
 	*/
@@ -51,9 +50,7 @@ class PropertyValue extends StructuredValue {
 	public $unitText;
 
 	/**
-	* @var boolean|integer|StructuredValue|string The value of the quantitative value or property value node.
-	* 
-	* For QuantitativeValue and MonetaryAmount, the recommended type for values is 'Number'.
+	* @var boolean|integer|StructuredValue|string The value of the quantitative value or property value node.For QuantitativeValue and MonetaryAmount, the recommended type for values is 'Number'.
 	* For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.
 	*/
 	public $value;

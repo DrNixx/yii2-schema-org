@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Person
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Person
  */
-class Person extends Thing {
+class Person extends Thing
+{
 	/**
 	* @var string An additional name for a Person, can be used for a middle name.
 	*/
@@ -120,6 +119,11 @@ class Person extends Thing {
 	public $globalLocationNumber;
 
 	/**
+	* @var Occupation The Person's occupation. For past professions, use Role for expressing dates.
+	*/
+	public $hasOccupation;
+
+	/**
 	* @var OfferCatalog Indicates an OfferCatalog listing for this Organization, Person, or Service.
 	*/
 	public $hasOfferCatalog;
@@ -163,6 +167,16 @@ class Person extends Thing {
 	* @var Person The most generic bi-directional social/work relation.
 	*/
 	public $knows;
+
+	/**
+	* @var string|Thing|string Of a Person, and less typically of an Organization, to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or yet relate this to educational content, events, objectives or JobPosting descriptions.
+	*/
+	public $knowsAbout;
+
+	/**
+	* @var Language|string Of a Person, and less typically of an Organization, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the IETF BCP 47 standard.
+	*/
+	public $knowsLanguage;
 
 	/**
 	* @var Offer A pointer to products or services offered by the organization or person. Inverse property: offeredBy.

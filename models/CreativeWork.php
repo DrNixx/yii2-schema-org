@@ -1,16 +1,15 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for CreativeWork
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/CreativeWork
  */
-class CreativeWork extends Thing {
+class CreativeWork extends Thing
+{
 	/**
-	* @var Thing The subject matter of the content.
+	* @var Thing The subject matter of the content. Inverse property: subjectOf.
 	*/
 	public $about;
 
@@ -115,7 +114,7 @@ class CreativeWork extends Thing {
 	public $contentLocation;
 
 	/**
-	* @var string Official rating of a piece of content—for example,'MPAA PG-13'.
+	* @var Rating|string Official rating of a piece of content—for example,'MPAA PG-13'.
 	*/
 	public $contentRating;
 
@@ -138,6 +137,11 @@ class CreativeWork extends Thing {
 	* @var integer The year during which the claimed copyright for the CreativeWork was first asserted.
 	*/
 	public $copyrightYear;
+
+	/**
+	* @var CorrectionComment|string Indicates a correction to a CreativeWork, either via a CorrectionComment, textually or in another document.
+	*/
+	public $correction;
 
 	/**
 	* @var Organization|Person The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
@@ -185,6 +189,15 @@ class CreativeWork extends Thing {
 	public $encoding;
 
 	/**
+	* @var string Media type typically expressed using a MIME format (see IANA site and MDN reference) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
+	* 
+	* In cases where a CreativeWork has several media type representations, encoding can be used to indicate each MediaObject alongside particular encodingFormat information.
+	* 
+	* Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry. Supersedes fileFormat.
+	*/
+	public $encodingFormat;
+
+	/**
 	* @var CreativeWork A creative work that this work is an example/instance/realization/derivation of. Inverse property: workExample.
 	*/
 	public $exampleOfWork;
@@ -193,11 +206,6 @@ class CreativeWork extends Thing {
 	* @var string Date the content expires and is no longer useful or available. For example a VideoObject or NewsArticle whose availability or relevance is time-limited, or a ClaimReview fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.
 	*/
 	public $expires;
-
-	/**
-	* @var string Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.
-	*/
-	public $fileFormat;
 
 	/**
 	* @var Organization|Person A person or organization that supports (sponsors) something through some kind of financial contribution.
@@ -210,7 +218,7 @@ class CreativeWork extends Thing {
 	public $genre;
 
 	/**
-	* @var CreativeWork Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. Inverse property: isPartOf.
+	* @var CreativeWork|Trip Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). Inverse property: isPartOf.
 	*/
 	public $hasPart;
 
@@ -250,7 +258,7 @@ class CreativeWork extends Thing {
 	public $isFamilyFriendly;
 
 	/**
-	* @var CreativeWork Indicates a CreativeWork that this CreativeWork is (in some sense) part of. Inverse property: hasPart.
+	* @var CreativeWork|Trip Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart.
 	*/
 	public $isPartOf;
 
@@ -352,6 +360,22 @@ class CreativeWork extends Thing {
 	public $schemaVersion;
 
 	/**
+	* @var string Indicates the date on which the current structured data was generated / published. Typically used alongside sdPublisher
+	*/
+	public $sdDatePublished;
+
+	/**
+	* @var CreativeWork|string A license document that applies to this structured data, typically indicated by URL.
+	*/
+	public $sdLicense;
+
+	/**
+	* @var Organization|Person Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The
+	* sdPublisher property helps make such practices more explicit.
+	*/
+	public $sdPublisher;
+
+	/**
 	* @var Organization The Organization on whose behalf the creator was working.
 	*/
 	public $sourceOrganization;
@@ -371,7 +395,9 @@ class CreativeWork extends Thing {
 	/**
 	* @var string The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in ISO 8601 time interval format. In
 	*       the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written "2011/2012"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL.
-	*       Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945". Supersedes datasetTimeInterval, temporal.
+	*       Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945".
+	* 
+	* Open-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated. Supersedes datasetTimeInterval, temporal.
 	*/
 	public $temporalCoverage;
 

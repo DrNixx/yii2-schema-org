@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Canal
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Canal
  */
-class Canal extends BodyOfWater {
+class Canal extends BodyOfWater
+{
 	/**
 	* @var PropertyValue A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
 	* 

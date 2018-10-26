@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for SuspendAction
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/SuspendAction
  */
-class SuspendAction extends ControlAction {
+class SuspendAction extends ControlAction
+{
 	/**
 	* @var ActionStatusType Indicates the current disposition of the Action.
 	*/

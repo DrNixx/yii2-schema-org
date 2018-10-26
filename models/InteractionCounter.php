@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for InteractionCounter
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/InteractionCounter
  */
-class InteractionCounter extends StructuredValue {
+class InteractionCounter extends StructuredValue
+{
 	/**
 	* @var SoftwareApplication|WebSite The WebSite or SoftwareApplication where the interactions took place.
 	*/

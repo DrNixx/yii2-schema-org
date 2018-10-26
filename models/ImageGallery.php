@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ImageGallery
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ImageGallery
  */
-class ImageGallery extends CollectionPage {
+class ImageGallery extends CollectionPage
+{
 	/**
 	* @var BreadcrumbList|string A set of links that can help a user understand and navigate a website hierarchy.
 	*/

@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for LiveBlogPosting
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/LiveBlogPosting
  */
-class LiveBlogPosting extends BlogPosting {
+class LiveBlogPosting extends BlogPosting
+{
 	/**
 	* @var string The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
 	*/

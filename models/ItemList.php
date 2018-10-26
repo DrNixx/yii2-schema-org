@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for ItemList
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/ItemList
  */
-class ItemList extends Intangible {
+class ItemList extends Intangible
+{
 	/**
 	* @var ListItem|string|Thing For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.
 	* 

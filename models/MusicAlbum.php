@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for MusicAlbum
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/MusicAlbum
  */
-class MusicAlbum extends MusicPlaylist {
+class MusicAlbum extends MusicPlaylist
+{
 	/**
 	* @var MusicAlbumProductionType Classification of the album by it's type of content: soundtrack, live album, studio album, etc.
 	*/

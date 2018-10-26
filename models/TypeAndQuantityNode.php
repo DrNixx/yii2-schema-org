@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for TypeAndQuantityNode
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/TypeAndQuantityNode
  */
-class TypeAndQuantityNode extends StructuredValue {
+class TypeAndQuantityNode extends StructuredValue
+{
 	/**
 	* @var integer The quantity of the goods included in the offer.
 	*/

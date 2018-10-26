@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Seat
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Seat
  */
-class Seat extends Intangible {
+class Seat extends Intangible
+{
 	/**
 	* @var string The location of the reserved seat (e.g., 27).
 	*/

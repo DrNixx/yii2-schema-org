@@ -1,14 +1,13 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for UnitPriceSpecification
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/UnitPriceSpecification
  */
-class UnitPriceSpecification extends PriceSpecification {
+class UnitPriceSpecification extends PriceSpecification
+{
 	/**
 	* @var integer This property specifies the minimal quantity and rounding increment that will be the basis for the billing. The unit of measurement is specified by the unitCode property.
 	*/

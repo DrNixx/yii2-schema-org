@@ -1,16 +1,15 @@
 <?php
-
 namespace onix\schemaorg\models;
 
 /**
  * Model for Event
  *
- * @package onix\schemaorg\models
  * @see http://schema.org/Event
  */
-class Event extends Thing {
+class Event extends Thing
+{
 	/**
-	* @var Thing The subject matter of the content.
+	* @var Thing The subject matter of the content. Inverse property: subjectOf.
 	*/
 	public $about;
 
