@@ -25,229 +25,233 @@ use yii\helpers\Console;
  * @property \onix\schemaorg\Module $module
  */
 class SchemaOrgController extends Controller {
-	public $defaultAction = 'generate';
+    public $defaultAction = 'generate';
 
-	/**
-	 * Load schema.org object tree and generate model files
-	 * @param boolean $clear Clear directory before generating models
-	 * @return integer Exit code
-	 * @throws Exception
-	 */
-	public function actionGenerate($clear = false) {
-		$tree = $this->loadTree();
+    /**
+     * Load schema.org object tree and generate model files
+     * @param boolean $clear Clear directory before generating models
+     * @return integer Exit code
+     * @throws Exception
+     */
+    public function actionGenerate($clear = false) {
+        $tree = $this->loadTree();
 
-		if ($clear) {
-			$modelDir = realpath(__DIR__.DIRECTORY_SEPARATOR.'..').DIRECTORY_SEPARATOR.'models';
-			if (file_exists($modelDir) && is_dir($modelDir)) {
-				$files = glob($modelDir.DIRECTORY_SEPARATOR.'*');
-				if ($files && is_array($files)) {
-					foreach ($files as $file) {
-						$this->stdout("File '$modelDir".DIRECTORY_SEPARATOR."$file' deleted\n", Console::FG_YELLOW);
-						@unlink($modelDir . DIRECTORY_SEPARATOR . $file);
-					}
-				}
-			}
-		}
+        if ($clear) {
+            $modelDir = realpath(__DIR__.DIRECTORY_SEPARATOR.'..').DIRECTORY_SEPARATOR.'models';
+            if (file_exists($modelDir) && is_dir($modelDir)) {
+                $files = glob($modelDir.DIRECTORY_SEPARATOR.'*');
+                if ($files && is_array($files)) {
+                    foreach ($files as $file) {
+                        $this->stdout("File '$modelDir".DIRECTORY_SEPARATOR."$file' deleted\n", Console::FG_YELLOW);
+                        @unlink($modelDir . DIRECTORY_SEPARATOR . $file);
+                    }
+                }
+            }
+        }
 
-		$this->stdout("Generating Models...\n");
-		$this->generateModelsFromTree($tree);
+        $this->stdout("Generating Models...\n");
+        $this->generateModelsFromTree($tree);
 
-		return ExitCode::OK;
-	}
+        return ExitCode::OK;
+    }
 
-	/**
-	 * Load tree from schema.org
-	 *
-	 * @return array|boolean
-	 * @throws Exception
-	 */
-	protected function loadTree() {
-		$source = $this->module->source;
-		$this->stdout("Loading Thing tree from '{$source}'...\n");
+    /**
+     * Load tree from schema.org
+     *
+     * @return array|boolean
+     * @throws Exception
+     */
+    protected function loadTree() {
+        $source = $this->module->source;
+        $this->stdout("Loading Thing tree from '{$source}'...\n");
 
-		$dom = new \DOMDocument();
-		if (!@$dom->loadHTMLFile($source)) {
-			throw new Exception("Failed to load source: $source");
-		}
-		$xquery = new \DOMXPath($dom);
-		$html   = $dom->saveHTML($xquery->query('//*[@id="thing_tree"]/ul')->item(0));
+        $dom = new \DOMDocument();
+        if (!@$dom->loadHTMLFile($source)) {
+            throw new Exception("Failed to load source: $source");
+        }
+        $xquery = new \DOMXPath($dom);
+        $html   = $dom->saveHTML($xquery->query('//*[@id="thing_tree"]/ul')->item(0));
 
-		return $this->parseTree($html);
-	}
+        return $this->parseTree($html);
+    }
 
-	/**
-	 * Generates models out of tree
-	 *
-	 * @param array $tree
-	 * @param string $parent
-	 * @throws Exception
-	 */
-	protected function generateModelsFromTree(array $tree, $parent = 'Model') {
-		$matches   = [];
-		$className = null;
-		foreach ($tree as $item) {
-			if (is_array($item)) {
-				$this->generateModelsFromTree($item, $className);
-			} elseif (is_string($item)) {
-				if (preg_match('#<a href="([^"]+)">((?:[A-Za-z]+)+)</a>#', $item, $matches)) {
-					$url       = trim($matches[1], ".");
-					$className = $matches[2];
+    /**
+     * Generates models out of tree
+     *
+     * @param array $tree
+     * @param string $parent
+     * @throws Exception
+     */
+    protected function generateModelsFromTree(array $tree, $parent = 'Model') {
+        $matches   = [];
+        $className = null;
+        foreach ($tree as $item) {
+            if (is_array($item)) {
+                $this->generateModelsFromTree($item, $className);
+            } elseif (is_string($item)) {
+                if (preg_match('#<a href="([^"]+)">((?:[A-Za-z]+)+)</a>#', $item, $matches)) {
+                    $url       = trim($matches[1], ".");
+                    $className = $matches[2];
 
-					$this->stdout("Generate model '{$className}'\n");
-					$this->generateModel($url, $className, $parent);
-				}
-			}
-		}
-	}
+                    $this->stdout("Generate model '{$className}'\n");
+                    $this->generateModel($url, $className, $parent);
+                }
+            }
+        }
+    }
 
-	/**
-	 * Parse schema.org description and write model
-	 *
-	 * @param string $url
-	 * @param string $className
-	 * @param string $parent
-	 *
-	 * @return bool
-	 * @throws Exception
-	 */
-	protected function generateModel($url, $className, $parent = 'Model') {
-		$sourceUrl = parse_url($this->module->source);
-		$url       = $sourceUrl['scheme'].'://'.$sourceUrl['host'].$url;
+    private static $allowedTypesWithoutParentDefs = [
+        'ContactPoint'
+    ];
 
-		$this->stdout("Load properties from '{$url}'\n");
+    /**
+     * Parse schema.org description and write model
+     *
+     * @param string $url
+     * @param string $className
+     * @param string $parent
+     *
+     * @return bool
+     * @throws Exception
+     */
+    protected function generateModel($url, $className, $parent = 'Model') {
+        $sourceUrl = parse_url($this->module->source);
+        $url       = $sourceUrl['scheme'].'://'.$sourceUrl['host'].$url;
 
-		$dom = new \DOMDocument();
-		if (!@$dom->loadHTMLFile($url)) {
-			$this->stderr("Failed to load source for '{$className}': $url\n");
+        $this->stdout("Load properties from '{$url}'\n");
 
-			return false;
-		}
-		$xquery     = new \DOMXPath($dom);
-		$list       = $xquery->query('//*[@id="mainContent"]/table[1]/tbody[1]/tr');
-		$properties = [];
+        $dom = new \DOMDocument();
+        if (!@$dom->loadHTMLFile($url)) {
+            $this->stderr("Failed to load source for '{$className}': $url\n");
 
-		$modelDir = realpath(__DIR__.DIRECTORY_SEPARATOR.'..').DIRECTORY_SEPARATOR.'models';
-		if ((!file_exists($modelDir) || !is_dir($modelDir)) && !mkdir($modelDir)) {
-			throw new Exception("Could not create directory '{$modelDir}'");
-		}
+            return false;
+        }
+        $xquery     = new \DOMXPath($dom);
+        $list       = $xquery->query('//*[@id="mainContent"]/table[1]/tbody[1]/tr');
+        $properties = [];
 
-		$filePath = $modelDir.DIRECTORY_SEPARATOR.$className.'.php';
+        $modelDir = realpath(__DIR__.DIRECTORY_SEPARATOR.'..').DIRECTORY_SEPARATOR.'models';
+        if ((!file_exists($modelDir) || !is_dir($modelDir)) && !mkdir($modelDir)) {
+            throw new Exception("Could not create directory '{$modelDir}'");
+        }
 
-		if (file_exists($filePath)) {
-			$this->stdout("Model '$className' already exists. Continue...\n");
-			return true;
-		}
+        $filePath = $modelDir.DIRECTORY_SEPARATOR.$className.'.php';
 
-		if ($parent === 'Model' || (
-				$list->length &&
-				$list->item($list->length - 1)->hasAttribute('class') &&
-				$list->item($list->length - 1)->attributes->getNamedItem('class')->nodeValue === 'supertype')
-		) {
-			foreach ($list as $item) {
-				/* @var $item \DOMElement */
-				if (!$item->hasAttribute('typeof') || (string) $item->attributes->getNamedItem('typeof')->nodeValue !== 'rdfs:Property') {
-					continue;
-				}
+        if (file_exists($filePath)) {
+            $this->stdout("Model '$className' already exists. Continue...\n");
+            return true;
+        }
 
-				$tdIndex  = 0;
-				$property = [];
-				foreach ($item->childNodes as $node) {
-					/* @var $node \DOMElement */
-					if ($node->nodeType === XML_TEXT_NODE) {
-						continue;
-					}
+        if (($parent === 'Model') || in_array($className, self::$allowedTypesWithoutParentDefs) || (
+                $list->length &&
+                $list->item($list->length - 1)->hasAttribute('class') &&
+                $list->item($list->length - 1)->attributes->getNamedItem('class')->nodeValue === 'supertype')
+        ) {
+            foreach ($list as $item) {
+                /* @var $item \DOMElement */
+                if (!$item->hasAttribute('typeof') || (string) $item->attributes->getNamedItem('typeof')->nodeValue !== 'rdfs:Property') {
+                    continue;
+                }
 
-					if (strcasecmp($node->nodeName, 'th') === 0) {
-						$property['name'] = trim($node->textContent);
-					} elseif (strcasecmp($node->nodeName, 'td') === 0) {
-						if ($tdIndex++ === 0) {
-							$property['type'] = preg_replace(
-								'#(string|integer|float|boolean)(?:\|\1)+#',
-								'$1',
-								str_replace([
-								'Boolean',
-								'False',
-								'True',
-								'DateTime',
-								'Date',
-								'Time',
-								'Number',
-								'Float',
-								'Integer',
-								'Text',
-								'URL'
-							], [
-								'boolean',
-								'boolean',
-								'boolean',
-								'string',
-								'string',
-								'string',
-								'integer',
-								'float',
-								'integer',
-								'string',
-								'string'
-							], trim(implode('|', array_map(function($item) {
-								return trim($item, " \t\n\r\0\x0B\xC2\xA0");
-							}, explode(' or ', trim($node->textContent)))))));
-						} else {
-							$property['description'] = trim($node->textContent);
-						}
-					}
-				}
+                $tdIndex  = 0;
+                $property = [];
+                foreach ($item->childNodes as $node) {
+                    /* @var $node \DOMElement */
+                    if ($node->nodeType === XML_TEXT_NODE) {
+                        continue;
+                    }
 
-				$properties[] = $property;
-			}
-		}
+                    if (strcasecmp($node->nodeName, 'th') === 0) {
+                        $property['name'] = trim($node->textContent);
+                    } elseif (strcasecmp($node->nodeName, 'td') === 0) {
+                        if ($tdIndex++ === 0) {
+                            $property['type'] = preg_replace(
+                                '#(string|integer|float|boolean)(?:\|\1)+#',
+                                '$1',
+                                str_replace([
+                                'Boolean',
+                                'False',
+                                'True',
+                                'DateTime',
+                                'Date',
+                                'Time',
+                                'Number',
+                                'Float',
+                                'Integer',
+                                'Text',
+                                'URL'
+                            ], [
+                                'boolean',
+                                'boolean',
+                                'boolean',
+                                'string',
+                                'string',
+                                'string',
+                                'integer',
+                                'float',
+                                'integer',
+                                'string',
+                                'string'
+                            ], trim(implode('|', array_map(function($item) {
+                                return trim($item, " \t\n\r\0\x0B\xC2\xA0");
+                            }, explode(' or ', trim($node->textContent)))))));
+                        } else {
+                            $property['description'] = trim($node->textContent);
+                        }
+                    }
+                }
 
-		$phpcode = $this->renderPartial('model-template', [
-			'parent'     => $parent,
-			'className'  => $className,
-			'url'        => $url,
-			'properties' => $properties
-		]);
+                $properties[] = $property;
+            }
+        }
 
-		if (file_put_contents($filePath, $phpcode)) {
-			$this->stdout("File '$filePath' written\n");
-		} else {
-			$this->stderr("Could not write file '$filePath'\n");
-		}
+        $phpcode = $this->renderPartial('model-template', [
+            'parent'     => $parent,
+            'className'  => $className,
+            'url'        => $url,
+            'properties' => $properties
+        ]);
 
-		return true;
-	}
+        if (file_put_contents($filePath, $phpcode)) {
+            $this->stdout("File '$filePath' written\n");
+        } else {
+            $this->stderr("Could not write file '$filePath'\n");
+        }
 
-	/**
-	 * Parse unordered list tree structure and returns as array
-	 *
-	 * @param string|\SimpleXMLElement $ul
-	 *
-	 * @return array|bool array tree or false
-	 * @throws Exception
-	 */
-	private function parseTree($ul) {
-		if (is_string($ul)) {
-			if (!$ul = simplexml_load_string($ul)) {
-				throw new Exception("Syntax error in UL/LI structure");
-			}
+        return true;
+    }
 
-			return $this->parseTree($ul);
-		} elseif (is_object($ul)) {
-			$output = [];
-			foreach ($ul->li as $li) {
-				foreach ($li->children() as $tag => $child) {
-					/* @var $child \SimpleXMLElement */
-					if (strcasecmp($tag, 'ul') === 0) {
-						$output[] = $this->parseTree($child);
-					} else {
-						$output[] = $child->asXML();
-					}
-				}
-			}
+    /**
+     * Parse unordered list tree structure and returns as array
+     *
+     * @param string|\SimpleXMLElement $ul
+     *
+     * @return array|bool array tree or false
+     * @throws Exception
+     */
+    private function parseTree($ul) {
+        if (is_string($ul)) {
+            if (!$ul = simplexml_load_string($ul)) {
+                throw new Exception("Syntax error in UL/LI structure");
+            }
 
-			return $output;
-		}
+            return $this->parseTree($ul);
+        } elseif (is_object($ul)) {
+            $output = [];
+            foreach ($ul->li as $li) {
+                foreach ($li->children() as $tag => $child) {
+                    /* @var $child \SimpleXMLElement */
+                    if (strcasecmp($tag, 'ul') === 0) {
+                        $output[] = $this->parseTree($child);
+                    } else {
+                        $output[] = $child->asXML();
+                    }
+                }
+            }
 
-		return false;
-	}
+            return $output;
+        }
+
+        return false;
+    }
 }
